@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product1</title>
+    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/product1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header id="home">
+        <a href="../index.html"><img src="../assets/img/mainlogo.png" alt="logo" /></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="header-icons">
+            <i class="fa-regular fa-user icons" style="color: #000000; width: 25px; height: 25px"></i>
+            <i class="fa-solid fa-magnifying-glass icons" style="color: #000000; width: 25px; height: 25px"></i>
+            <i class="fa-regular fa-heart icons" style="color: #000000; width: 25px; height: 25px"></i>
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping icons" style="color: #000000; width: 25px; height: 25px"></i></a>
+        </div>
+        <button popovertarget="sidebar">
+            <i class="fa-solid fa-bars baricon"></i>
+          </button>
+          <div id="sidebar" popover>
+            <button popovertarget="sidebar" popovertargetaction="hide"><i class="fa-solid fa-x x-icon"></i></button>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="sidebar-icons">
+              <i class="fa-regular fa-user icons" style="color: #000000; width: 25px; height: 25px"></i>
+              <i class="fa-solid fa-magnifying-glass icons" style="color: #000000; width: 25px; height: 25px"></i>
+              <i class="fa-regular fa-heart icons" style="color: #000000; width: 25px; height: 25px"></i>
+              <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping icons" style="color: #000000; width: 25px; height: 25px"></i></a>
+            </div>
+          </div>
+    </header>
+    <main>
+        <section class="product">
+            <div class="tabs">
+                <p>Home <span>&gt;</span></p>
+                <p>Shop <span>&gt;</span></p>
+                <span>|</span>
+                <h5>Asgaard sofa</h5>
+            </div>
+            <div class="container">
+                <div class="product-imgs">
+                    <div class="mini-imgs">
+                        <img src="../assets/img/product1/1.png" alt="img1">
+                        <img src="../assets/img/product1/2.png" alt="img2">
+                        <img src="../assets/img/product1/3.png" alt="img3">
+                        <img src="../assets/img/product1/4.png" alt="img4">
+                    </div>
+                    <div class="main-img">
+                        <img src="../assets/img/product1/5.png" alt="img5">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1>Asgaard sofa</h1>
+                    <span class="price">$7000</span>
+                    <div class="reviews">
+                        <img src="../assets/img/product1/reviews.png" alt="reviews">
+                        <span>|</span>
+                        <span>5 Customer Review</span>
+                    </div>
+                    <p>Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+                        stout-hearted
+                        hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
+                    </p>
+                    <span class="customize">Size</span>
+                    <div class="sizes">
+                        <button>L</button>
+                        <button>XL</button>
+                        <button>XS</button>
+                    </div>
+                    <span class="customize">Color</span>
+                    <div class="colors">
+                        <div class="purple color"></div>
+                        <div class="black color"></div>
+                        <div class="gold color"></div>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="quantity"><i class="fa-solid fa-minus minus iicon"></i> 1 <i
+                                class="fa-solid fa-plus plus iicon"></i></button>
+                        <button popovertarget="cart-sidebar">Add To Cart</button>
+                        <div id="cart-sidebar" popover>
+                            <div class="container">
+                                <div class="title">
+                                    <h3>Shopping Cart</h3>
+                                    <i class="fa-solid fa-bag-shopping icon"></i>
+                                </div>
+                                <hr>
+                                <div class="product-cart">
+                                    <img src="../assets/img/cart-sidebar/1.png" alt="product1">
+                                    <div>
+                                        <h4>Asgaard sofa</h4>
+                                        <span><span>1 x</span> $7000</span>
+                                    </div>
+                                    <i class="fa-solid fa-circle-xmark icon"></i>
+                                </div>
+                                <div class="product-cart">
+                                    <img src="../assets/img/cart-sidebar/2.png" alt="product2">
+                                    <div>
+                                        <h4>Casaliving Wood</h4>
+                                        <span><span>1 x</span> $7500</span>
+                                    </div>
+                                    <i class="fa-solid fa-circle-xmark icon"></i>
+                                </div>
+                                <div class="total">
+                                    <div>
+                                        <h4>Subtotal</h4>
+                                        <span>$14500</span>
+                                    </div>
+                                    <hr style="width: 100%;">
+                                    <div class="btns">
+                                        <a href="cart.html"><button>Cart</button></a>
+                                        <a href="checkout.html"><button>Checkout</button></a>
+                                        <button>Comparison</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button><i class="fa-solid fa-plus"></i> Compare</button>
+                    </div>
+                    <hr>
+                    <div class="categ">
+                        <div class="tags">
+                            <span>SKU</span>
+                            <span>Category</span>
+                            <span>Tags</span>
+                            <span>Share</span>
+                        </div>
+                        <div class="share">
+                            <span>SS001</span>
+                            <span>Sofas</span>
+                            <span>Sofa, Chair, Home, Shop</span>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-facebook social iicon"></i>
+                                <i class="fa-brands fa-linkedin social iicon"></i>
+                                <i class="fa-brands fa-square-twitter social iicon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section class="product-description">
+            <div class="continer">
+                <div class="title">
+                    <h4>Description</h4>
+                    <h4>Additional Information</h4>
+                    <h4>Reviews [5]</h4>
+                </div>
+                <div>
+                    <p>Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker
+                        takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the
+                        road.</p>
+                    <p>Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering.
+                        Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+                        stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs
+                        for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune
+                        the controls to your personal preferences while the guitar-influenced leather strap enables easy
+                        and stylish travel.</p>
+                </div>
+                <div class="img">
+                    <img src="../assets/img/product1/6.png" alt="product image1">
+                    <img src="../assets/img/product1/7.png" alt="product image2">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="related-products">
+            <div class="continer">
+                <h3>Related Products</h3>
+                <a href="product1.html">
+                    <div class="products">
+                        <div class="product">
+                            <img src="../assets/img/products/1.png" />
+                            <h5>Syltherine</h5>
+                            <p>Stylish cafe chair</p>
+                            <span>$2.500 <del>$3.500</del></span>
+                            <div class="product-hover">
+                                <button>Add to cart</button>
+                                <div>
+                                    <span><i class="fa-regular fa-share-from-square"></i> share</span>
+                                    <span><i class="fa-solid fa-right-left"></i> Compare</span>
+                                    <span><i class="fa-regular fa-heart"></i> Like</span>
+                                </div>
+                            </div>
+                        </div>
+                </a>
+                <a href="product1.html">
+                    <div class="product">
+                        <img src="../assets/img/products/2.png" />
+                        <h5>Leviosa</h5>
+                        <p>Stylish cafe chair</p>
+                        <span>$2.500 </span>
+                        <div class="product-hover">
+                            <button>Add to cart</button>
+                            <div>
+                                <span><i class="fa-regular fa-share-from-square"></i> share</span>
+                                <span><i class="fa-solid fa-right-left"></i> Compare</span>
+                                <span><i class="fa-regular fa-heart"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product1.html">
+                    <div class="product">
+                        <img src="../assets/img/products/3.png" />
+                        <h5>Lolito</h5>
+                        <p>Luxury big sofa</p>
+                        <span>$7.000 <del>$14.000 </del></span>
+                        <div class="product-hover">
+                            <button>Add to cart</button>
+                            <div>
+                                <span><i class="fa-regular fa-share-from-square"></i> share</span>
+                                <span><i class="fa-solid fa-right-left"></i> Compare</span>
+                                <span><i class="fa-regular fa-heart"></i> Like</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                <a href="product1.html">
+                    <div class="product">
+                        <img src="../assets/img/products/4.png" />
+                        <h5>Respira</h5>
+                        <p>Outdoor bar table and stool</p>
+                        <span>$500</span>
+                        <div class="product-hover">
+                            <button>Add to cart</button>
+                            <div>
+                                <span><i class="fa-regular fa-share-from-square"></i> share</span>
+                                <span><i class="fa-solid fa-right-left"></i> Compare</span>
+                                <span><i class="fa-regular fa-heart"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <a href="shop.html"><button class="secondry-btn">Show More</button></a>
+            </div>
+        </section>
+        <hr>
+    </main>
+
+    <footer>
+        <div>
+            <h5>Funiro</h5>
+            <h6>
+                400 University Drive Suite 200 Coral <br />
+                Gables,<br />
+                FL 33134 USA
+            </h6>
+        </div>
+        <div>
+            <h6>Links</h6>
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="shop.html">Shop</a></p>
+            <p><a href="blog.html">Blog</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+            <h6>Help</h6>
+            <p>Payment Options</p>
+            <p>Returns</p>
+            <p>Privacy Policies</p>
+        </div>
+        <div>
+            <h6>Newsletter</h6>
+            <div class="sub">
+                <input type="email" placeholder="Enter Your Email Address" />
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+        <div>
+            <hr />
+            <span>&copy; 2023 furino. All rights reverved </span>
+            <a class="scroll-up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

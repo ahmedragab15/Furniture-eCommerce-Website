@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header id="home">
+        <a href="../index.html"><img src="../assets/img/mainlogo.png" alt="logo" /></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="header-icons">
+            <i class="fa-regular fa-user icons" style="color: #000000; width: 25px; height: 25px"></i>
+            <i class="fa-solid fa-magnifying-glass icons" style="color: #000000; width: 25px; height: 25px"></i>
+            <i class="fa-regular fa-heart icons" style="color: #000000; width: 25px; height: 25px"></i>
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping icons" style="color: #000000; width: 25px; height: 25px"></i></a>
+        </div>
+        <button popovertarget="sidebar">
+            <i class="fa-solid fa-bars baricon"></i>
+          </button>
+          <div id="sidebar" popover>
+            <button popovertarget="sidebar" popovertargetaction="hide"><i class="fa-solid fa-x x-icon"></i></button>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="sidebar-icons">
+              <i class="fa-regular fa-user icons" style="color: #000000; width: 25px; height: 25px"></i>
+              <i class="fa-solid fa-magnifying-glass icons" style="color: #000000; width: 25px; height: 25px"></i>
+              <i class="fa-regular fa-heart icons" style="color: #000000; width: 25px; height: 25px"></i>
+              <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping icons" style="color: #000000; width: 25px; height: 25px"></i></a>
+            </div>
+          </div>
+    </header>
+    <section id="hero-sec">
+        <h1>Checkout</h1>
+        <p>Home &gt; <span>Checkout</span></p>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="billing-details">
+                <h2>Billing details</h2>
+                <form>
+                    <div>
+                        <div>
+                            <div class="name">
+                                <label for="First-Name">First Name</label>
+                                <input id="First-Name" name="First-Name" type="text" placeholder="Your First Name"
+                                    required>
+                            </div>
+                            <div class="name">
+                                <label for="Last Name">Last Name</label>
+                                <input id="Last-Name" name="Last-Name" type="text" placeholder="Your Last Name"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="Comp-name">Company Name (Optional)</label>
+                        <input id="Comp-name" name="Comp-name" type="text" placeholder="Optional">
+                    </div>
+                    <div>
+                        <label for="Country">Country / Region</label>
+                        <select name="Country" id="Country">
+                            <optgroup label="Middle East">
+                                <option value="Eg">Egypt</option>
+                                <option value="KSA">Saudi Arabia</option>
+                                <option value="UAE">United Arab Emirates</option>
+                            </optgroup>
+                            <optgroup label="Europe">
+                                <option value="Fr">France</option>
+                                <option value="It">Italy</option>
+                                <option value="Ger">Germany</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="address">Street Address</label>
+                        <input id="address" name="address" type="text" placeholder="Your Address" required>
+                    </div>
+                    <div>
+                        <label for="City">Town / City</label>
+                        <input id="City" name="City" type="text" placeholder="Your City" required>
+                    </div>
+                    <div>
+                        <label for="Province">Province</label>
+                        <select name="Province" id="Province">
+                            <option value="Cairo">Cairo</option>
+                            <option value="Giza">Giza</option>
+                            <option value="Alexandria" selected>Alexandria</option>
+                            <option value="Qalubia">Qalubia</option>
+                            <option value="Port-Said">Port Said</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ZIP">ZIP code</label>
+                        <input id="ZIP" name="ZIP" type="text" placeholder="ZIP code" required>
+                    </div>
+                    <div>
+                        <label for="Phone">Phone</label>
+                        <input id="Phone" name="Phone" type="text" placeholder="type your Phone Number" required>
+                    </div>
+                    <div>
+                        <label for="Email">Email address</label>
+                        <input id="Email" name="Email" type="email" placeholder="type your Email" required>
+                    </div>
+                    <div>
+                        <label for="note">Note</label>
+                        <input id="note" name="note" type="text" placeholder="Additional information">
+                    </div>
+
+            </div>
+            <div class="place-order">
+                <div>
+                    <h4>Product</h4>
+                    <h4>Subtotal</h4>
+                </div>
+                <div>
+                    <h6>Asgaard sofa</h6>
+                    <h5>$7000</h5>
+                </div>
+                <div>
+                    <h5>Subtotal</h5>
+                    <h5>$7000</h5>
+                </div>
+                <div>
+                    <h5>Total</h5>
+                    <span class="total">$7000</span>
+                </div>
+                <hr>
+                <h5>Direct Bank Transfer</h5>
+                <h6>Make your payment directly into our bank account. Please use <br> your Order ID as the payment
+                    reference.
+                    Your order will not be <br> shipped until the funds have cleared in our account.</h6>
+                <h6>Direct Bank Transfer</h6>
+                <h6>Cash On Delivery</h6>
+                <p>Your personal data will be used to support your experience <br> throughout this website, to manage
+                    access to
+                    your account, and <br>for other purposes described in our <span>privacy policy.</span></p>
+                <button>Place order</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <section id="features-sec">
+        <div class="container">
+          <div>
+            <i class="fa-solid fa-trophy feat-icons" style="color: #242424"></i>
+            <div class="one">
+              <h4>High Quality</h4>
+              <p>crafted from top materials</p>
+            </div>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check feat-icons" style="color: #242424"></i>
+            <div class="one">
+              <h4>Warranty Protection</h4>
+              <p>Over 2 years</p>
+            </div>
+          </div>
+          <div>
+            <i class="fa-solid fa-truck-fast feat-icons" style="color: #242424"></i>
+            <div class="one">
+              <h4>Free Shipping</h4>
+              <p>Order over 150 $</p>
+            </div>
+          </div>
+          <div>
+            <i class="fa-solid fa-headset feat-icons" style="color: #242424"></i>
+            <div class="one">
+              <h4>24 / 7 Support</h4>
+              <p>Dedicated support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <footer>
+        <div>
+            <h5>Funiro</h5>
+            <h6>
+                400 University Drive Suite 200 Coral <br />
+                Gables,<br />
+                FL 33134 USA
+            </h6>
+        </div>
+        <div>
+            <h6>Links</h6>
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="shop.html">Shop</a></p>
+            <p><a href="blog.html">Blog</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+            <h6>Help</h6>
+            <p>Payment Options</p>
+            <p>Returns</p>
+            <p>Privacy Policies</p>
+        </div>
+        <div>
+            <h6>Newsletter</h6>
+            <div class="sub">
+                <input type="email" placeholder="Enter Your Email Address" />
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+        <div>
+            <hr />
+            <span>&copy; 2023 furino. All rights reverved </span>
+            <a class="scroll-up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
