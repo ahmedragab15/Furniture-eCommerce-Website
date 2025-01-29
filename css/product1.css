@@ -1,127 +1,3 @@
-header {
-  width: 100%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-header img {
-  width: 170px;
-  height: auto;
-  cursor: pointer;
-}
-
-nav {
-  padding: 0 20%;
-}
-
-nav ul {
-  display: flex;
-}
-
-header li a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 25px;
-  position: relative;
-}
-header li a::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 0;
-  background-color: var(--maincolor);
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  transition: 0.4s;
-  filter: drop-shadow(0px 3px 15px var(--sec-color));
-}
-header li a:hover::after {
-  width: 90%;
-}
-
-header li a:hover {
-  color: var(--maincolor);
-}
-
-
-#header-icons {
-  width: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  cursor: pointer;
-}
-
-#header-icons .icons:hover {
-  transition: 0.3s;
-  transform: scale(1.3);
-}
-
-header .baricon {
-  display: none;
-  font-size: 28px;
-}
-
-#sidebar {
-  width: 50vw;
-  height: 100vh;
-  border: none;
-  background-color: white;
-  box-shadow: 6px 3px 9px 0px #00000047;
-  margin-left: auto;
-  overflow: hidden;
-
-}
-
-#sidebar::backdrop {
-  background-color: #0000006f;
-}
-
-#sidebar button{
-  width: 25px;
-  height: 25px;
-  font-size: 18px;
-margin:10px 15px ;
-border: none;
-background-color: transparent;
-}
-
-
-#sidebar ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#sidebar ul li {
-  padding: 50px;
-}
-
-#sidebar ul a {
-  font-size: 25px;
-}
-
-
-#sidebar .sidebar-icons {
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-  
-  }
-  #sidebar .sidebar-icons .icons{
-    padding: 20px;
-  }
-  
-  #sidebar .sidebar-icons .icons:hover {
-    transition: 0.3s;
-    transform: scale(1.3);
-  }
-  
 main {
   width: 100%;
   height: fit-content;
@@ -179,11 +55,19 @@ main .product-imgs .mini-imgs img:hover {
   border: 1px black solid;
   border-radius: 10px;
 }
-
+main .product-imgs .main-img{
+  overflow: hidden;
+}
 main .product-imgs .main-img img {
-  width: fit-content;
-  height: 500px;
+  width: 430px;
+  min-width: auto;
+  height: fit-content;
   cursor: zoom-in;
+  margin-left: 30px;
+  transition: 0.7s;
+}
+main .product-imgs img:hover {
+  transform: scale(1.1);
 }
 
 main .product-info {
@@ -199,9 +83,17 @@ main .product-info h1 {
 main .product-info .price {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #9f9f9f;
+  color: var(--maincolor);
   padding-left: 5px;
 }
+main .product-info .discount{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #9f9f9f;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
 main .product-info .reviews {
   width: 320px;
   display: flex;
@@ -373,15 +265,15 @@ main .product-description .title h4 {
   font-weight: 400;
   cursor: pointer;
 }
-main .product-description .title h4:first-child {
-  color: black;
-  font-weight: 500;
-}
+
+main .product-description .title h4.active,
 main .product-description .title h4:hover {
   color: black;
   font-weight: 500;
 }
-
+main .product-description .title-description div:not(:first-child){
+  display: none;
+}
 main .product-description p {
   width: 1026px;
   color: #9f9f9f;
@@ -752,7 +644,7 @@ footer > div:last-child span {
 
 @media (max-width: 1231px) {
   header nav ul,
-  header #header-icons {
+  header #header-icons,#sign {
     display: none;
   }
 
@@ -853,6 +745,11 @@ footer > div:last-child span {
   main .product .tabs span {
     padding: 0 10px;
   }
+  main .product .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
   main .product .tabs h5 {
     font-size: 0.8rem;
   }
@@ -936,11 +833,6 @@ footer > div:last-child span {
     justify-content: space-evenly;
     height: 250px;
   }
-  main .product .container {
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-  }
 
   main .product-description .title h4 {
     font-size: 1.1rem;
@@ -1010,6 +902,16 @@ footer > div:last-child span {
 }
 
 @media (max-width: 600px) {
+
+.product-imgs{
+  flex-direction: column-reverse;
+}
+main .product-imgs .mini-imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 5%;
+}
   main .product-description .title {
     width: auto;
   }
@@ -1065,7 +967,8 @@ footer > div:last-child span {
     height: 45px;
   }
   main .product-imgs .main-img img {
-    height: 300px;
+    width: 95%;
+    margin-left: 0;
   }
   main .product-info h1 {
     font-size: 2rem;

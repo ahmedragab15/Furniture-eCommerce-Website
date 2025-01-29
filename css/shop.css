@@ -1,124 +1,90 @@
-header {
-  width: 100%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-header img {
-  width: 170px;
-  height: auto;
-  cursor: pointer;
-}
-
-nav {
-  padding: 0 20%;
-}
-
-nav ul {
-  display: flex;
-}
-
-header li a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 25px;
-  position: relative;
-}
-header li a::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 0;
-  background-color: var(--maincolor);
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  transition: 0.4s;
-  filter: drop-shadow(0px 3px 15px var(--sec-color));
-}
-header li a:hover::after {
-  width: 90%;
-}
-
-header li a:hover {
-  color: var(--maincolor);
-}
-
-
-#header-icons {
-  width: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  cursor: pointer;
-}
-
-#header-icons .icons:hover {
-  transition: 0.3s;
-  transform: scale(1.3);
-}
-
-header .baricon {
-  display: none;
-  font-size: 28px;
-}
-
-#sidebar {
-  width: 50vw;
-  height: 100vh;
-  border: none;
-  background-color: white;
-  box-shadow: 6px 3px 9px 0px #00000047;
-  margin-left: auto;
-  overflow: hidden;
-}
-
-#sidebar::backdrop {
-  background-color: #0000006f;
-}
-
-#sidebar button {
-  width: 25px;
-  height: 25px;
-  font-size: 18px;
-  margin: 10px 15px;
-  border: none;
-  background-color: transparent;
-}
-
-#sidebar ul {
+.share-popup {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transition: 0.4s;
+  transform: scale(0);
+  z-index: 2000;
+  top: 35%;
 }
 
-#sidebar ul li {
-  padding: 50px;
+.active-popup {
+  transform: scale(1);
 }
 
-#sidebar ul a {
+.close {
+  position: absolute;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.share-popup p {
+  margin: 0.5rem;
+  font-size: 14px;
+}
+
+.socials {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.socials .icons {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--maincolor);
   font-size: 25px;
 }
 
-#sidebar .sidebar-icons {
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-  
-  }
-  #sidebar .sidebar-icons .icons{
-    padding: 20px;
-  }
-  
-  #sidebar .sidebar-icons .icons:hover {
-    transition: 0.3s;
-    transform: scale(1.3);
-  }
-  
+.socials .icons:hover {
+  background: var(--maincolor);
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper input {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  outline: none;
+}
+
+.share-popup a {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  background-color: var(--maincolor);
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 0.7rem;
+}
+
+
+.link {
+  position: absolute;
+  top: 11px;
+  left: 6px;
+}
+
+
+
 #hero-sec {
   width: 100%;
   height: 316px;
@@ -168,7 +134,7 @@ main .filter div {
 }
 
 main .filter div:first-child {
-  width: 30%;
+  width: 45%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -177,10 +143,12 @@ main .filter div:first-child {
 main .filter div p {
   font-size: 1.25rem;
 }
+
 main .filter-icon {
   font-size: 20px;
   cursor: pointer;
 }
+
 main .filter-icon:hover {
   transform: scale(1.3);
   transition: 0.3;
@@ -193,25 +161,27 @@ main .filter div:last-child {
   align-items: center;
 }
 
-main .filter div:last-child input {
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  padding-left: 15px;
+.categories .button-value {
+  border: 2px solid var(--maincolor);
+  padding: 1rem 2.2rem;
+  border-radius: 3rem;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
 }
 
-main .filter div:last-child .number {
-  width: 55px;
-  height: 55px;
+.categories .button-value:hover {
+  background-color: var(--maincolor);
+  color: #fff;
 }
 
-main .filter div:last-child .sort {
-  width: 188px;
-  height: 55px;
+.button-value.active {
+  background-color: var(--maincolor);
+  color: #fff;
 }
 
-main .filter div:last-child ::placeholder {
-  font-size: 18px;
+.product.hide {
+  display: none;
 }
 
 main #products {
@@ -253,6 +223,7 @@ main #products .product::before {
   opacity: 0;
   transition: 0.3s;
 }
+
 main #products .product:hover::before {
   opacity: 1;
 }
@@ -267,10 +238,12 @@ main #products .product .product-hover {
   z-index: -1;
   transition: 0.5s;
 }
+
 main #products .product:hover .product-hover {
   z-index: 6;
   transform: translateY(20px);
 }
+
 main #products .product .product-hover button {
   width: 202px;
   height: 48px;
@@ -284,23 +257,80 @@ main #products .product .product-hover button {
   cursor: pointer;
   transition: 0.3s;
 }
+
 main #products .product .product-hover button:hover {
   color: white;
   background-color: var(--maincolor);
   border-radius: 20px;
   transform: scale(1.1);
 }
+
+#products .product .cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#products .product .IconContainer {
+  position: absolute;
+  top: -5px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .5s;
+}
+
+#products .product .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: var(--maincolor);
+  transition-duration: .5s;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#products .product .cart-btn:hover .IconContainer {
+  transform: translateX(58px);
+  border-radius: 40px;
+  transition-duration: .5s;
+}
+
+#products .product .cart-btn:hover .text {
+  transform: translate(10px, 0px);
+  transition-duration: .5s;
+  color: #fff;
+}
+
+#products .product .cart-btn:active {
+  transform: scale(0.95);
+  transition-duration: .5s;
+}
+
 main #products .product .product-hover div {
   display: flex;
   flex-direction: row;
 }
+
 main #products .product .product-hover span {
   color: white;
   font-size: 1rem;
   font-weight: 600;
   margin-right: 7px;
   transition: 0.3s;
+  cursor: pointer;
 }
+
 main #products .product .product-hover span:hover {
   transform: scale(1.1);
 }
@@ -364,6 +394,11 @@ main .page-number button {
   margin-bottom: 70px;
 }
 
+.page-number button.active {
+  color: #fff;
+  background-color: var(--maincolor);
+}
+
 main .page-number .next {
   width: 98px;
 }
@@ -376,6 +411,7 @@ main .page-number button:hover {
 #features-sec {
   background-color: #faf3ea;
 }
+
 #features-sec .container {
   width: 100%;
   height: 270px;
@@ -383,7 +419,8 @@ main .page-number button:hover {
   justify-content: space-evenly;
   align-items: center;
 }
-#features-sec .container > div {
+
+#features-sec .container>div {
   display: flex;
   flex-direction: row;
 }
@@ -414,7 +451,7 @@ footer {
   position: relative;
 }
 
-footer > div {
+footer>div {
   display: flex;
   flex-direction: column;
   margin: 4% 5%;
@@ -496,13 +533,13 @@ footer button {
   cursor: pointer;
 }
 
-footer > div:last-child {
+footer>div:last-child {
   width: 85%;
   position: absolute;
   bottom: -13%;
 }
 
-footer > div:last-child span {
+footer>div:last-child span {
   font-size: 1rem;
 }
 
@@ -510,8 +547,10 @@ footer > div:last-child span {
 
 
 @media (max-width: 1231px) {
+
   header nav ul,
-  header #header-icons {
+  header #header-icons,
+  #sign {
     display: none;
   }
 
@@ -527,14 +566,16 @@ footer > div:last-child span {
   main .filter div {
     margin: 0 2%;
   }
+
   main .filter div:first-child {
     width: 40%;
   }
+
   main .filter div:last-child {
     width: 40%;
   }
 
-  #features-sec .container > div {
+  #features-sec .container>div {
     flex-direction: column;
   }
 }
@@ -543,27 +584,38 @@ footer > div:last-child span {
   main .filter div:first-child {
     width: 50%;
   }
+
+  main .filter div p {
+    display: none;
+  }
+
   main .filter div:last-child {
     width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
-  main .filter div:last-child .number {
-    width: 50px;
-    height: 50px;
+
+  .categories .button-value {
+    border: 2px solid var(--maincolor);
+    padding: 0.8rem 1.4rem;
+    border-radius: 3rem;
+    font-size: 0.8rem;
   }
-  main .filter div:last-child .sort {
-    width: 158px;
-    height: 50px;
-  }
+
   #features-sec .feat-icons {
     width: 50px;
     height: 50px;
   }
+
   #features-sec h4 {
     font-size: 1.2rem;
   }
+
   #features-sec p {
     font-size: 0.9rem;
   }
+
   footer .sub {
     display: flex;
     flex-direction: column;
@@ -579,10 +631,6 @@ footer > div:last-child span {
     height: 250px;
   }
 
-  main .filter div p {
-    display: none;
-  }
-
   main .page-number button {
     width: 45px;
     height: 45px;
@@ -590,7 +638,7 @@ footer > div:last-child span {
     font-size: 17px;
     margin-bottom: 50px;
   }
-  
+
   main .page-number .next {
     width: 75px;
   }
@@ -599,13 +647,16 @@ footer > div:last-child span {
     height: 150px;
     padding: 0 20px;
   }
+
   #features-sec .feat-icons {
     width: 40px;
     height: 40px;
   }
+
   #features-sec h4 {
     font-size: 1rem;
   }
+
   #features-sec p {
     font-size: 0.7rem;
   }
@@ -617,25 +668,28 @@ footer > div:last-child span {
   }
 
   main .filter div:first-child {
-    width: 30%;
+    width: 25%;
   }
+
   main .filter div:last-child {
-    width: 50%;
-    justify-content: space-between;
+    width: 75%;
+    justify-content: space-evenly;
   }
 
   #features-sec .feat-icons {
     width: 30px;
     height: 30px;
   }
+
   #features-sec h4 {
     font-size: 0.9rem;
   }
+
   #features-sec p {
     font-size: 0.5rem;
   }
 
-  footer > div {
+  footer>div {
     margin: 4% 3%;
   }
 
@@ -652,6 +706,7 @@ footer > div:last-child span {
     font-size: 0.8rem;
     margin-top: 30px;
   }
+
   footer input {
     width: 90px;
   }
@@ -659,6 +714,7 @@ footer > div:last-child span {
   footer input::placeholder {
     font-size: 0.65rem;
   }
+
   footer button {
     font-size: 0.65rem;
   }
@@ -668,9 +724,26 @@ footer > div:last-child span {
   #sidebar ul li {
     padding: 30px;
   }
+
   #sidebar ul a {
     font-size: 18px;
   }
+
+  main .filter div:first-child {
+    display: none;
+  }
+
+  main .filter div:last-child {
+    width: 100%;
+  }
+
+  .categories .button-value {
+    border: 2px solid var(--maincolor);
+    padding: 0.6rem 1.1rem;
+    border-radius: 3rem;
+    font-size: 0.7rem;
+  }
+
   footer input {
     width: 60px;
   }

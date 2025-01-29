@@ -1,0 +1,20 @@
+#product-sec .product .product-hover button {
+    width: 202px;
+    height: 48px;
+    color: var(--maincolor);
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #product-sec .product .product-hover button:hover {
+    color: white;
+    background-color: var(--maincolor);
+    border-radius: 20px;
+    transform: scale(1.1);
+  }

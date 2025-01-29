@@ -1,131 +1,3 @@
-header {
-  width: 100%;
-  height: 9vh;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: sticky;
-  top: 0px;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0px -5px 20px 0px #0000002d;
-}
-
-header img {
-  width: 170px;
-  height: auto;
-  cursor: pointer;
-}
-
-nav {
-  padding: 0 20%;
-}
-
-nav ul {
-  display: flex;
-}
-
-header li a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 25px;
-  position: relative;
-}
-header li a::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 0;
-  background-color: var(--maincolor);
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  transition: 0.4s;
-  filter: drop-shadow(0px 3px 15px var(--sec-color));
-}
-header li a:hover::after {
-  width: 90%;
-}
-
-header li a:hover {
-  color: var(--maincolor);
-}
-
-#header-icons {
-  width: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  cursor: pointer;
-}
-
-#header-icons .icons:hover {
-  transition: 0.3s;
-  transform: scale(1.3);
-}
-
-header .baricon {
-  display: none;
-  font-size: 28px;
-}
-
-#sidebar {
-  width: 50vw;
-  height: 100vh;
-  border: none;
-  background-color: white;
-  box-shadow: 6px 3px 9px 0px #00000047;
-  margin-left: auto;
-  overflow: hidden;
-
-}
-
-#sidebar::backdrop {
-  background-color: #0000006f;
-}
-
-#sidebar button{
-  width: 25px;
-  height: 25px;
-  font-size: 18px;
-margin:10px 15px ;
-border: none;
-background-color: transparent;
-}
-
-
-#sidebar ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#sidebar ul li {
-  padding: 50px;
-}
-
-#sidebar ul a {
-  font-size: 25px;
-}
-
-#sidebar .sidebar-icons {
-flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  cursor: pointer;
-
-}
-#sidebar .sidebar-icons .icons{
-  padding: 20px;
-}
-
-#sidebar .sidebar-icons .icons:hover {
-  transition: 0.3s;
-  transform: scale(1.3);
-}
-
 #home {
   width: 100%;
   height: 91vh;
@@ -137,8 +9,8 @@ flex: 1;
 }
 
 #home div {
-  width: 38%;
-  height: 60%;
+  width: 710px;
+  height: 505px;
   background-color: #fff3e3;
   margin-right: 10%;
   padding-left: 40px;
@@ -303,7 +175,7 @@ flex: 1;
   margin-bottom: 20px;
 }
 
-#product-sec .products {
+#product-sec #products {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +237,7 @@ flex: 1;
   outline: none;
   margin-bottom: 10px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 #product-sec .product .product-hover button:hover {
@@ -375,12 +247,65 @@ flex: 1;
   transform: scale(1.1);
 }
 
+#product-sec .product .cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#product-sec .product .IconContainer {
+  position: absolute;
+  top: -5px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .5s;
+}
+
+#product-sec .product .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: var(--maincolor);
+  transition-duration: .5s;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#product-sec .product .cart-btn:hover .IconContainer {
+  transform: translateX(58px);
+  border-radius: 40px;
+  transition-duration: .5s;
+}
+
+#product-sec .product .cart-btn:hover .text {
+  transform: translate(10px, 0px);
+  transition-duration: .5s;
+  color: #fff;
+}
+
+#product-sec .product .cart-btn:active {
+  transform: scale(0.95);
+  transition-duration: .5s;
+}
+
 #product-sec .product .product-hover span {
   color: white;
   font-size: 1rem;
   font-weight: 600;
   margin-right: 7px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 #product-sec .product .product-hover span:hover {
@@ -616,7 +541,7 @@ flex: 1;
 
 #gallery-sec {
   width: 100%;
-  height: auto;
+  height: 620px;
   background-color: rgba(235, 228, 228, 0.378);
   overflow: hidden;
 }
@@ -658,6 +583,7 @@ flex: 1;
   transition: 0.5s;
   cursor: zoom-in;
 }
+
 #gallery-sec .container .gallery img:hover {
   transform: scale(1.1);
   filter: brightness(0.9);
@@ -669,7 +595,7 @@ footer {
   position: relative;
 }
 
-footer > div {
+footer>div {
   display: flex;
   flex-direction: column;
   margin: 4% 5%;
@@ -751,19 +677,25 @@ footer button {
   cursor: pointer;
 }
 
-footer > div:last-child {
+footer>div:last-child {
   width: 85%;
   position: absolute;
   bottom: -13%;
 }
 
-footer > div:last-child span {
+footer>div:last-child span {
   font-size: 1rem;
 }
 
 @media (max-width: 1231px) {
+
   header nav ul,
-  header #header-icons {
+  header #header-icons,
+  #sign {
+    display: none;
+  }
+
+  #sign {
     display: none;
   }
 
@@ -777,7 +709,8 @@ footer > div:last-child span {
   }
 
   #home div {
-    height: 55%;
+    width: 510px;
+    height: 440px;
   }
 
   #home h1 {
@@ -805,14 +738,17 @@ footer > div:last-child span {
   #product-sec .continer {
     width: 100%;
   }
+
   #inspiration-sec .title {
     flex: 1;
   }
+
   #inspiration-sec div img:last-child,
   .inspiration-imgs button,
   #inspiration-sec .dots {
     display: none;
   }
+
   #gallery-sec {
     height: 60vh;
   }
@@ -820,8 +756,8 @@ footer > div:last-child span {
 
 @media (max-width: 992px) {
   #home div {
-    height: 45%;
-    padding-left: 25px;
+    width: 450px;
+    height: 340px;
   }
 
   #home span {
@@ -864,7 +800,7 @@ footer > div:last-child span {
     font-size: 1.8rem;
   }
 
-  #product-sec .products {
+  #product-sec #products {
     gap: 18px;
   }
 
@@ -911,8 +847,8 @@ footer > div:last-child span {
   }
 
   #home div {
-    height: 35%;
-    padding-left: 20px;
+    width: 350px;
+    height: 290px;
   }
 
   #home span {
@@ -967,9 +903,8 @@ footer > div:last-child span {
 
 @media (max-width: 600px) {
   #home div {
-    width: 45%;
-    height: 35%;
-    padding-left: 20px;
+    width: 230px;
+    height: 270px;
   }
 
   #home span {
@@ -978,6 +913,7 @@ footer > div:last-child span {
 
   #home h1 {
     font-size: 1.3rem;
+    padding: 0;
   }
 
   #home p {
@@ -1005,11 +941,13 @@ footer > div:last-child span {
   #gallery-sec .container .title h3 {
     font-size: 2.1rem;
   }
+
   #gallery-sec .container .gallery img {
     width: 200px;
     height: 210px;
   }
-  footer > div {
+
+  footer>div {
     margin: 4% 3%;
   }
 
@@ -1026,6 +964,7 @@ footer > div:last-child span {
     font-size: 0.8rem;
     margin-top: 30px;
   }
+
   footer input {
     width: 90px;
   }
@@ -1033,6 +972,7 @@ footer > div:last-child span {
   footer input::placeholder {
     font-size: 0.65rem;
   }
+
   footer button {
     font-size: 0.65rem;
   }
@@ -1042,6 +982,7 @@ footer > div:last-child span {
   #sidebar ul li {
     padding: 30px;
   }
+
   #sidebar ul a {
     font-size: 18px;
   }
@@ -1049,6 +990,7 @@ footer > div:last-child span {
   #home {
     height: 70vh;
   }
+
   #home div {
     height: 35%;
     padding-left: 15px;
@@ -1094,6 +1036,7 @@ footer > div:last-child span {
   #inspiration-sec .continer {
     height: 450px;
   }
+
   #inspiration-sec h2 {
     width: 440px;
     font-size: 2rem;
@@ -1110,9 +1053,11 @@ footer > div:last-child span {
     height: 40px;
     font-size: 0.7rem;
   }
+
   #gallery-sec .container {
     margin: 1.2rem auto;
   }
+
   #gallery-sec .container .title span {
     font-size: 0.8rem;
   }
@@ -1121,10 +1066,12 @@ footer > div:last-child span {
     font-size: 1.8rem;
     margin-bottom: 8px;
   }
+
   #gallery-sec .container .gallery img {
     width: 150px;
     height: 210;
   }
+
   footer input {
     width: 60px;
   }

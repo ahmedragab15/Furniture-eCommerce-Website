@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "title": "Syltherine",
+        "price": 2500,
+        "description": "Stylish cafe chair Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "bref": "Stylish cafe table",
+        "image": "../assets/img/products/1.png",
+        "category": "Chairs",
+        "discount": 3500
+    },
+    {
+        "id": 2,
+        "title": "Leviosa",
+        "price": 2500,
+        "description": "Stylish cafe chair Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "bref": "Stylish cafe chair",
+        "image": "../assets/img/products/2.png",
+        "category": "Chairs",
+        "discount": 3000
+    },
+    {
+        "id": 3,
+        "title": "Lolito",
+        "price": 7000,
+        "description": "Luxury big sofa Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/3.png",
+        "bref": "Luxury big sofa",
+        "category": "Sofas",
+        "discount": 14000
+    },
+    {
+        "id": 4,
+        "title": "Respira",
+        "price": 500,
+        "description": "Outdoor bar table and stool Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/4.png",
+        "bref": "Outdoor bar table and stool",
+        "category": "Sofas",
+        "discount": 1000
+    },
+    {
+        "id": 5,
+        "title": "Grifo",
+        "price": 1500,
+        "description": "Night lamp Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/5.png",
+        "bref": "Night lamp",
+        "category": "Lamps",
+        "discount": 2000
+    },
+    {
+        "id": 6,
+        "title": "Muggo",
+        "price": 150,
+        "description": "Small mug Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/6.png",
+        "bref": "Small mug",
+        "category": "Sofas",
+        "discount": 300
+    },
+    {
+        "id": 7,
+        "title": "Pingky",
+        "price": 7000,
+        "description": "Cute bed set Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/7.png",
+        "bref": "Cute bed set",
+        "category": "Sofas",
+        "discount": 14000
+    },
+    {
+        "id": 8,
+        "title": "Potty",
+        "price": 500,
+        "description": "Minimalist flower pot Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/8.png",
+        "bref": "Minimalist flower pot",
+        "category": "Sofas",
+        "discount": 1500
+    },
+    {
+        "id": 9,
+        "title": "Syltherine",
+        "price": 2500,
+        "description": "Stylish cafe chair Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/1.png",
+        "category": "Chairs",
+        "bref": "Stylish cafe table",
+        "discount": 3500
+    },
+    {
+        "id": 10,
+        "title": "Leviosa",
+        "price": 2500,
+        "description": "Stylish cafe chair Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/2.png",
+        "category": "Chairs",
+        "bref": "Stylish cafe chair",
+        "discount": 3000
+    },
+    {
+        "id": 11,
+        "title": "Lolito",
+        "price": 7000,
+        "description": "Luxury big sofa Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/3.png",
+        "bref": "Luxury big sofa",
+        "category": "Sofas",
+        "discount": 14000
+    },
+    {
+        "id": 12,
+        "title": "Respira",
+        "price": 500,
+        "description": "Outdoor bar table and stool Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/4.png",
+        "bref": "Outdoor bar table and stool",
+        "category": "Sofas",
+        "discount": 1000
+    },
+    {
+        "id": 13,
+        "title": "Grifo",
+        "price": 1500,
+        "description": "Night lamp Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/5.png",
+        "bref": "Night lamp",
+        "category": "Lamps",
+        "discount": 2000
+    },
+    {
+        "id": 14,
+        "title": "Muggo",
+        "price": 150,
+        "description": "Small mug Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/6.png",
+        "bref": "Small mug",
+        "category": "Sofas",
+        "discount": 300
+    },
+    {
+        "id": 15,
+        "title": "Pingky",
+        "price": 7000,
+        "description": "Cute bed set Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/7.png",
+        "bref": "Cute bed set",
+        "category": "Sofas",
+        "discount": 14000
+    },
+    {
+        "id": 16,
+        "title": "Potty",
+        "price": 500,
+        "description": "Minimalist flower pot Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange",
+        "image": "../assets/img/products/8.png",
+        "bref": "Minimalist flower pot",
+        "category": "Sofas",
+        "discount": 1500
+    }
+]

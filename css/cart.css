@@ -1,128 +1,3 @@
-header {
-  width: 100%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-header img {
-  width: 170px;
-  height: auto;
-  cursor: pointer;
-}
-
-nav {
-  padding: 0 20%;
-}
-
-nav ul {
-  display: flex;
-}
-
-header li a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 25px;
-  position: relative;
-}
-header li a::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 0;
-  background-color: var(--maincolor);
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  transition: 0.4s;
-  filter: drop-shadow(0px 3px 15px var(--sec-color));
-}
-header li a:hover::after {
-  width: 90%;
-}
-
-header li a:hover {
-  color: var(--maincolor);
-}
-
-
-#header-icons {
-  width: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  cursor: pointer;
-}
-
-#header-icons .icons:hover {
-  transition: 0.3s;
-  transform: scale(1.3);
-}
-
-header .baricon {
-  display: none;
-  font-size: 28px;
-}
-
-#sidebar {
-  width: 50vw;
-  height: 100vh;
-  border: none;
-  background-color: white;
-  box-shadow: 6px 3px 9px 0px #00000047;
-  margin-left: auto;
-  overflow: hidden;
-
-}
-
-#sidebar::backdrop {
-  background-color: #0000006f;
-}
-
-#sidebar button{
-  width: 25px;
-  height: 25px;
-  font-size: 18px;
-margin:10px 15px ;
-border: none;
-background-color: transparent;
-}
-
-
-#sidebar ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#sidebar ul li {
-  padding: 50px;
-}
-
-#sidebar ul a {
-  font-size: 25px;
-}
-
-
-#sidebar .sidebar-icons {
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-  
-  }
-  #sidebar .sidebar-icons .icons{
-    padding: 20px;
-  }
-  
-  #sidebar .sidebar-icons .icons:hover {
-    transition: 0.3s;
-    transform: scale(1.3);
-  }
-  
-
 #hero-sec {
   width: 100%;
   height: 316px;
@@ -166,7 +41,7 @@ main .continer {
 
 main .products-info {
   width: fit-content;
-  height: 215px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -192,46 +67,72 @@ main .products-details span {
 
 main .products-info .products {
   width: 100%;
-  height: 55px;
+  height:fit-content;
+  position: relative;
+}
+main .products-info .product {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  position: relative;
+  margin: 10px 0;
+  padding: 50px 0;
+  border-bottom: 1px #ddd solid;
 }
 
-main .products-info .products img {
+
+
+.quantity span{
+  display: inline-block;
+padding: 2px 6px;
+font-size: 1rem;
+  background-color: var(--maincolor);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.quantity span:nth-child(2){
+  background-color: transparent;
+  color: #000;
+}
+
+main .products-info .product img {
   width: 108px;
   height: 105px;
+  object-fit: cover;
   position: absolute;
   left: -3%;
   background-color: #f9f1e7;
   border-radius: 5px;
+ 
 }
-
-main .products-info .products .icon {
+main .products-info .product .icon {
   font-size: 22px;
   position: absolute;
   right: 0;
   cursor: pointer;
+  padding: 0 5px;
+
 }
 
-main .products-info .products .icon:hover {
+main .products-info .product .icon:hover {
   transform: scale(1.3);
   transition: 0.3s;
 }
 
-main .products p {
+main .product p {
   font-size: 1rem;
 }
 
-main .products input {
+main .product input {
   width: 32px;
   height: 32px;
   padding: 5px 10px;
 }
 
-main .products input::placeholder {
+main .product input::placeholder {
   padding-left: 8px;
 }
 
@@ -441,7 +342,7 @@ footer > div:last-child span {
 
 @media (max-width: 1231px) {
   header nav ul,
-  header #header-icons {
+  header #header-icons,#sign {
     display: none;
   }
 
@@ -626,7 +527,7 @@ footer > div:last-child span {
     font-size: 18px;
   }
   main .products-info .products-details {
-    width: 280px;
+    width: 300px;
   }
   main .products-details span {
     font-size: 0.8rem;
