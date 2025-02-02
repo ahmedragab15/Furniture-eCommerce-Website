@@ -27,7 +27,7 @@ function displayProduct(products) {     //* data = products
         product.classList.add("product");
         product.dataset.id = item.id
         product.innerHTML = `
-            <img src=${item.image} />
+            <img src=${item.imageH} />
             <h5>${item.title}</h5>
             <p>${item.bref}</p>
             <span>$${item.price}</span>
