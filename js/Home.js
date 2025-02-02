@@ -4,7 +4,7 @@ function productDetails(productId) {
 }
 
 //? fetch data       
-let apiUrl = "http://127.0.0.1:5503/api/api.json";
+let apiUrl = "api/api.json";
 
 let fetchProducts = () => {
     fetch(apiUrl)
