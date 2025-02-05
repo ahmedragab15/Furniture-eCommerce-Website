@@ -7,12 +7,16 @@ function productDetails(productId) {
 //? fetch data       
 let apiUrl = "../api/api.json";
 
-let fetchProducts = () => {
-    fetch(apiUrl)
-        .then(res => res.json())
-        .then(data => {
-            displayProduct(data)
-        })
+async function fetchProducts() {
+    try {
+        let res = await fetch(apiUrl)
+        let data = await res.json()
+        displayProduct(data)
+    } catch (error) {
+        let errorFetch = document.createElement("h1")
+        errorFetch.innerHTML = `failed to fetch the data Refresh the page`
+        productList.append(errorFetch)
+    }
 }
 fetchProducts()
 
